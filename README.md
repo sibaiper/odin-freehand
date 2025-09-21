@@ -3,13 +3,21 @@
 __A port of Steve Ruiz's library [perfect-freehand](https://github.com/steveruizok/perfect-freehand) to Odin__  
 
 
+### Demo
+To try the demo quickly, do the following:  
+1. clone the repo `git clone https://github.com/sibaiper/odin-freehand`
+2. run example `odin run ./examples/basic`
+
+
+
+
 ### Usage
 To use this library, import the perfect_freehand and call the getStroke function on an array of input points, such as those recorded from a user's mouse movement. The getStroke function will return a new array of outline points. These outline points will form a polygon (called a "stroke") that surrounds the input points.
 
 ```Odin
 import perfect_freehand "perfect_freehand"
 
-points: [dynamic]perfect_freehand.Point2D,
+points: [dynamic]perfect_freehand.Point2D // list of points to store the input in
 
 // collect user input into points, and pass them to getStroke():
 

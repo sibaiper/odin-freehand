@@ -72,8 +72,12 @@ main :: proc() {
             rl.DrawLineStrip(&smooth_pts[0], i32(len(smooth_pts)), rl.RED);
         }
 
+        delete(pts)
+        delete(smoothed)
         rl.EndDrawing()
     }
+
+    delete(app.points)
 }
 
 
